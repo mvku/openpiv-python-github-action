@@ -49,7 +49,7 @@ jobs:
 
   build_sdist:
     env:
-      CIBW_BEFORE_BUILD: "pip install cython"
+      CIBW_BEFORE_BUILD: "python -m pip install cython"
     name: Build source distribution
     runs-on: ubuntu-latest
     steps:
@@ -61,6 +61,8 @@ jobs:
           python-version: '3.7'
 
       - name: Build sdist
+        env:
+          CIBW_BEFORE_BUILD: "pip install cython"
         run: python setup.py sdist
 
       - uses: actions/upload-artifact@v2
