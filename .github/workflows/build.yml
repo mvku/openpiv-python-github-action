@@ -1,6 +1,6 @@
 env:
   CIBW_TEST_REQUIRES: pytest
-  CIBW_TEST_COMMAND: "pytest {project}/tests"
+  CIBW_TEST_COMMAND: "pytest openpiv/tests"
   # Skip building on Python 2.7 on all platforms
   CIBW_SKIP: cp27-*
 
