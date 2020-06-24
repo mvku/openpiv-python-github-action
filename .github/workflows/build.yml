@@ -1,6 +1,8 @@
 env:
+  # install your project and dependencies before building
+  CIBW_BEFORE_BUILD: pip install .
   CIBW_TEST_REQUIRES: pytest
-  CIBW_TEST_COMMAND: "pytest openpiv/test"
+  CIBW_TEST_COMMAND: "pytest --verbose"
   # Skip building on Python 2.7 on all platforms
   CIBW_SKIP: cp27-*
 
