@@ -1,5 +1,5 @@
 env:
-  CIBW_BEFORE_BUILD: pip install cython
+  CIBW_BEFORE_ALL: pip install cython
   CIBW_BUILD: "cp36-* cp37-* cp38-*"
 
 name: Build and upload to PyPI
